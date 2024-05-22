@@ -8,26 +8,27 @@
 <title>占い</title>
 </head>
 <body>
-<form action="/jmaster/fortuneservlet"  method="get">
+<form action="/jmaster2/fortuneservlet"  method="get">
 <h1>占いたい月を入力してね</h1>
-	<select>
-		<option name="month" value="1">1</option>
-		<option name="month" value="2">2</option>
-		<option name="month" value="3">3</option>
-		<option name="month" value="4">4</option>
-		<option name="month" value="5">5</option>
-		<option name="month" value="6">6</option>
-		<option name="month" value="7">7</option>
-		<option name="month" value="8">8</option>
-		<option name="month" value="9">9</option>
-		<option name="month" value="10">10</option>
-		<option name="month" value="11">11</option>
-		<option name="month" value="12">12</option>
+	<select name="month">
+		<option value="1">1</option>
+		<option value="2">2</option>
+		<option value="3">3</option>
+		<option value="4">4</option>
+		<option value="5">5</option>
+		<option value="6">6</option>
+		<option value="7">7</option>
+		<option value="8">8</option>
+		<option value="9">9</option>
+		<option value="10">10</option>
+		<option value="11">11</option>
+		<option value="12">12</option>
 	</select>
 	月
 	<input type="submit" value="占ってみる">
 </form>
 <hr>
+<c:if test="${bean.month ne null}">
 ${bean.month}月の運勢は、、、<br>
 <ul>
 	<li>ラッキーカラー：${bean.color}</li>
